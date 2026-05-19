@@ -35,18 +35,18 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public double getDeposit(){
-        // todo:code that adds deposit to a bank account.
-        return 0;
+    public void deposit(double deposit){
+        //code that adds deposit to the balance.
+        balance += deposit;
     }
 
-    public double getWithdraw(){
-        // todo:code that subtracts withdraws from the account.
-        return 0;
+    public void withdraw(double withdraw){
+        //code that subtracts withdraws from the balance.
+        balance -= withdraw;
     }
 
     public double getValue(){
-        // todo: add together everything to hold a balance.
-        return 0;
+        //add together everything to hold a balance for the account.
+        return balance;
     }
 }
