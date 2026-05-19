@@ -24,7 +24,8 @@ public class FinanceApplication {
         System.out.printf("Most Valuable: $%.2f%n", mostValuable.getValue());
 
         //Least valuable item
-        
+        Valuable leastValuable = portfolio.getLeastValuable();
+        System.out.printf("Least Valuable: $%.2f%n",leastValuable.getValue());
 
     }
 }
