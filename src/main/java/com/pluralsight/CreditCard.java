@@ -4,7 +4,9 @@ public class CreditCard {
     private String name;
     private String accountNumber;
     private double balance;
-    private double creditLimit;
+
+    //Constant credit limit
+    private final double CREDIT_LIMIT = 2000;
 
     public CreditCard(String name, String accountNumber, double balance) {
         this.name = name;
@@ -36,30 +38,35 @@ public class CreditCard {
         this.balance = balance;
     }
 
-    public void charge(double charge){
-        // todo: this one will add to the debt balance.
+    public double getCreditLimit() {
+        return CREDIT_LIMIT;
+    }
+
+    public double charge(double charge){
+        // this one will add to the debt balance.
         // check if charges would exceed limit
-        if(balance + charge <= creditLimit){
+        if(balance + charge <= CREDIT_LIMIT){
             balance += charge;
             System.out.println("Charge approved.");
         }else{
             System.out.println("Charge denied. Credit limit exceeded.");
         }
-
+        return balance;
     }
 
-    public void pay(double pay){
-        // todo: this one will subtract from the debtBalance.
+    public double pay(double pay){
+        //this one will subtract from the debtBalance.
         balance -= pay;
 
         //Prevent negative balance
         if (balance < 0){
             balance = 0;
         }
+        return balance;
     }
 
     public double getValue(){
-        // todo: this code will display the full value.
+        //this code will display the full value.
         return -balance;
     }
 }

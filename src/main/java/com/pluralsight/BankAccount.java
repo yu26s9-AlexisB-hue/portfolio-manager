@@ -1,13 +1,13 @@
 package com.pluralsight;
 
-public class BankAccount {
-    private String name;
+public class BankAccount implements Valuable{
     private String accountNumber;
+    private String name;
     private double balance;
 
-    public BankAccount(String name, String accountNumber, double balance) {
-        this.name = name;
+    public BankAccount(String accountNumber, String name,  double balance) {
         this.accountNumber = accountNumber;
+        this.name = name;
         this.balance = balance;
     }
 
@@ -37,7 +37,7 @@ public class BankAccount {
 
     public void deposit(double deposit){
         //code that adds deposit to the balance.
-        balance += deposit;
+       balance += deposit;
     }
 
     public void withdraw(double withdraw){
