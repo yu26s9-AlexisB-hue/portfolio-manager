@@ -5,9 +5,11 @@ public class Jewelry extends FixedAsset {
     private String metal;
     private double weight;
 
-    public Jewelry(String name, double marketValue, double karat) {
+    public Jewelry(String name, double marketValue, double karat, String metal, double weight) {
         super(name, marketValue);
         this.karat = karat;
+        this.metal = metal;
+        this.weight = weight;
     }
 
     public double getKarat() {

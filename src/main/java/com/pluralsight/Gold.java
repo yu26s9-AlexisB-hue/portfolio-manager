@@ -19,7 +19,7 @@ public class Gold extends FixedAsset {
 
     @Override
     public double getValue(){
-        //todo: Find the value for the weight of gold.
+        //Find the value for the weight of gold.
         return weight * 146;
     }
 }
